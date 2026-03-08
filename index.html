@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whispering Halls</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="overlay">
+    <div class="title">Whispering Halls</div>
+    <p>Explore the mansion. Find all 4 cursed relics and reach the exit.</p>
+    <p>WASD move · Mouse look · Shift sprint · F flashlight · M mute</p>
+    <button id="startButton">Enter the Mansion</button>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div id="objective">Relics: 0 / 4</div>
+    <div id="status">Flashlight: ON</div>
+    <div id="stamina">Stamina: 100%</div>
+  </div>
+
+  <div id="message" class="hidden"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
