@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackthorn Manor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="startOverlay" class="overlay">
+    <h1>Blackthorn Manor</h1>
+    <p class="subtitle">October 1931 · You are Elias Ward, investigating the manor where your sister vanished.</p>
+    <p>WASD move · Mouse look · Shift sprint · Space jump · F flashlight · P settings</p>
+    <button id="startBtn">Enter the Manor</button>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div id="objective">Objective: Find the four memory sigils and reach the front gate.</div>
+    <div id="statusLine">Stamina: 100% · Flashlight: ON · Graphics: HIGH</div>
+  </div>
+
+  <div id="thought" class="hidden"></div>
+
+  <div id="settingsPanel" class="hidden">
+    <h2>Settings (P)</h2>
+
+    <label>Field of View: <span id="fovValue">75</span></label>
+    <input id="fovSlider" type="range" min="55" max="100" value="75" />
+
+    <label>Graphics Quality</label>
+    <select id="qualitySelect">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high" selected>High</option>
+    </select>
+
+    <label>Move Forward Key</label>
+    <select id="forwardKey">
+      <option value="KeyW" selected>W</option>
+      <option value="ArrowUp">Arrow Up</option>
+    </select>
+
+    <label>Sprint Key</label>
+    <select id="sprintKey">
+      <option value="ShiftLeft" selected>Left Shift</option>
+      <option value="ShiftRight">Right Shift</option>
+    </select>
+
+    <label>Flashlight Key</label>
+    <select id="flashlightKey">
+      <option value="KeyF" selected>F</option>
+      <option value="KeyE">E</option>
+    </select>
+
+    <p class="hint">Press P to resume game.</p>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
