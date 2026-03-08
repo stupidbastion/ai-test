@@ -10,7 +10,7 @@ html, body {
   font-family: Inter, "Segoe UI", system-ui, sans-serif;
 }
 
-canvas { display: block; }
+canvas { display: block; position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 0; }
 
 .overlay {
   position: fixed;
