@@ -45,6 +45,67 @@ canvas { display: block; }
   padding: 0.8rem 1.3rem;
   border-radius: 7px;
   cursor: pointer;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  color: #e8e8e8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  image-rendering: auto;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(12, 12, 18, 0.5), rgba(0, 0, 0, 0.95));
+  backdrop-filter: blur(1px);
+  z-index: 5;
+}
+
+#overlay .title {
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  color: #d5c6ff;
+  text-shadow: 0 0 20px rgba(179, 108, 255, 0.35);
+  letter-spacing: 0.04em;
+}
+
+#overlay p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+#startButton {
+  margin-top: 1rem;
+  border: 1px solid #8975ad;
+  background: linear-gradient(#1d1530, #0f0b18);
+  color: #f0e7ff;
+  font-size: 1rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#startButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(183, 121, 255, 0.3);
 }
 
 #hud {
@@ -101,3 +162,33 @@ canvas { display: block; }
 
 .hint { opacity: 0.7; font-size: 0.84rem; margin: 0.3rem 0 0; }
 .hidden { display: none !important; }
+  z-index: 2;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(168, 150, 214, 0.35);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  min-width: 165px;
+}
+
+#hud > div + div {
+  margin-top: 0.35rem;
+}
+
+#message {
+  position: fixed;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: rgba(10, 0, 18, 0.55);
+  border: 1px solid rgba(211, 191, 255, 0.55);
+  border-radius: 6px;
+  padding: 0.55rem 0.9rem;
+  font-size: 1rem;
+  text-shadow: 0 0 8px rgba(215, 176, 255, 0.3);
+}
+
+.hidden {
+  display: none !important;
+}
